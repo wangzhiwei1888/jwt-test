@@ -1,6 +1,6 @@
 const redis = require('redis');
 const redisClient = redis.createClient(6379);
-const expire = 6 //1h
+const expire = 60*60 //1h
 redisClient.on('error', function (err) {
     console.log('redis Error:' + err);
 })
